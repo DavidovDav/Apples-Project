@@ -1,0 +1,22 @@
+{
+  "name": "apples-project",
+  "version": "1.0.0",
+  "description": "node.js project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidovDav/Apples-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidovDav/Apples-Project/issues"
+  },
+  "homepage": "https://github.com/DavidovDav/Apples-Project#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
