@@ -8,11 +8,13 @@ WORKDIR /app
 COPY ./package*.json ./
 
 RUN npm install \
-npm install express \
-npm install mongoose \ 
-npm install ejs \
-npm install --save-dev node
-
+    prom-client \
+    express \
+    mongoose \
+    mongodb \
+    ejs \
+    node
+    
 # Bundle app source
 COPY . .
 
