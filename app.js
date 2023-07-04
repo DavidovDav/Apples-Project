@@ -1,21 +1,37 @@
+// Imports
 const express = require('express');
 const mongoose = require("mongoose");
 const app = express();
-mongoose.connect("mongodb://localhost:27017/applesdb",{
-  useNewUrlParser:true,useUnifiedTopology:true
-},(err)=>{
-  if(err)
-  {
-    console.log(err)
-  }else{
-    console.log("successfully connected")
-  }
-})
 
+const url = ('mongodb://mongodb:27017/apples');
+
+// Connect to Mongo DB with mongoose.
+mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true})
+.then(() => console.log("Connected to Mongo DB successfully"))
+.catch(error => console.log("Error to connect Mongo DB: ", error));
+
+// Define a mongoose schema
+const fruitSchema = new mongoose.Schema({
+  _id: {type: Number, required:true},
+  name: {type: String, required:true},
+  qty: {type: Number, required:true},
+  rating: {type: Number, required:true},
+  microsieverts: {type: Number, required:false}
+});
+
+
+// Compile model from schema
+const fruits = mongoose.model("fruits", fruitSchema, "fruitsdb");
+
+// View ejs files(index.ejs etc).
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.render("index");
+  //res.render("index");
+  fruits.find({ name: 'apples' }).then(result => {
+    const qty = result.qty;
+    res.status(200).json(qty);
+  });
 });
 
 // Listen to the App Engine-specified port, or 8080 otherwise
