@@ -10,7 +10,6 @@ COPY ./package*.json ./
 RUN npm install \
     express \
     mongoose \
-    mongodb \
     ejs \
     node
     
