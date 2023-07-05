@@ -8,7 +8,6 @@ WORKDIR /app
 COPY ./package*.json ./
 
 RUN npm install \
-    prom-client \
     express \
     mongoose \
     mongodb \
