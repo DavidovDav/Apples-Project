@@ -20,7 +20,7 @@ const fruitSchema = new mongoose.Schema({
 });
 
 // Compile schema into model.
-const ${process.env.MONGODB_DATABASE} = mongoose.model("${process.env.MONGODB_DATABASE}", fruitSchema);
+const fruits = mongoose.model("fruits", fruitSchema);
 
 // Set the view engine for rendering dynamic html templates (index.ejs).
 app.set('view engine', 'ejs');

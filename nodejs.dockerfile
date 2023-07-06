@@ -5,9 +5,9 @@ WORKDIR /app
 
 # Copy app sources
 COPY ./package*.json ./
-COPY ./views .
+COPY ./views ./views
 COPY ./app.js .
-COPY ./node_modules .
+COPY ./node_modules ./node_modules
 
 # Install app dependencies
 RUN npm install \
