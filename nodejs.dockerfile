@@ -3,18 +3,20 @@ FROM node:16
 # Create app directory
 WORKDIR /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# Copy app sources
 COPY ./package*.json ./
+COPY ./views .
+COPY ./app.js .
+COPY ./node_modules .
 
+# Install app dependencies
 RUN npm install \
     express \
     mongoose \
     ejs \
     node
-    
-# Bundle app source
-COPY . .
 
 EXPOSE 3000
+
+# Run the script that execute the app.
 CMD [ "npm", "run", "start" ]

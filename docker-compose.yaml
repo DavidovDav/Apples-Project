@@ -11,9 +11,6 @@ services:
       - ./.env
     ports:
       - ${NGINX_LOCAL_PORT}:${NGINX_DOCKER_PORT}
-    #volumes:
-    #  - ./.nginx.conf:/etc/nginx/conf.d/default.conf
-    #  - ./views:/usr/share/nginx/html:rw
     depends_on:
       - nodejs
     networks:

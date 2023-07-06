@@ -1,6 +1,3 @@
-//const conn = new Mongo();
-//const db = conn.getDB("fruits");
-
 db = db.getSiblingDB('fruits');
 db.fruits.drop()
 
