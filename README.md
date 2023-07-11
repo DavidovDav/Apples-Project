@@ -12,7 +12,7 @@ Tools used in the project: Cloud - VMWare
 ## Running the Server Step by Step:
 1. Clone the repository from GitHub.
 2. Run the command '<sup> bash ./install-docker.sh </sup>'. This script will install docker and docker-compose for building and running the environment.
-3. Then run the command '<sup> bash ./start.sh </sup>'. This script will initiate the process of building and running the environment.
+3. Then run the command '<sup> bash ./start-app.sh </sup>'. This script will initiate the process of building and running the environment.
 
 Once the architecture is up and running, you can access the website at the following URL: http://paste-here-your-pc-ip:80
 
