@@ -1,6 +1,8 @@
 #!/bin/bash
 # This script only for when you launch new instance.
-su -u ubuntu -c '
+# Copy and paste it to the user data.
+# This script will install git, docker and docker-compose.
+su - ubuntu bash -c '
 sudo apt update && sudo apt upgrade -y
 sleep 2s
 sudo apt install git -y
