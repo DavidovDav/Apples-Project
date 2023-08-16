@@ -13,8 +13,8 @@ mongoose.connect(url,{useNewUrlParser: true, useUnifiedTopology: true})
 
 // Define a mongoose schema for the fruits collection.
 const fruitSchema = new mongoose.Schema({
-  _id: {type: Number, required:true},
-  name: {type: String},
+  _id: {type: Number},
+  name: {type: String, required:true},
   qty: {type: Number, required:true},
   rating: {type: Number}
 });
